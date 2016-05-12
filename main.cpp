@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iterator>
 
 using namespace std;
 
@@ -39,6 +40,251 @@ void prepareData(){
             cnt = 0;
          }
     }monthData.erase(monthData.begin()); timeData.erase(timeData.begin()); powerData.erase(powerData.begin());
+}
+
+void fermeture(){
+    int m=0; int t=0; int p=0; vector<string> tmp;
+    if(G.at(0).compare("January") == 0){
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("February") == 0){
+        m=1;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("March") == 0){
+        m=2;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("April") == 0){
+        m=3;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("May") == 0){
+        m=4;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("June") == 0){
+        m=5;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("July") == 0){
+        m=6;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("August") == 0){
+        m=7;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("September") == 0){
+        m=8;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("October") == 0){
+        m=9;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("November") == 0){
+        m=10;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(0).compare("December") == 0){
+        m=11;
+        if(fMonths.at(m).empty()){
+            fMonths.at(m).push_back(G.at(0)); fMonths.at(m).push_back(G.at(1));  fMonths.at(m).push_back(G.at(2));
+        }
+        else{
+            sort(fMonths.at(m).begin(),fMonths.at(m).end());
+            sort(G.begin(),G.end());
+            set_intersection(fMonths.at(m).begin(),fMonths.at(m).end(),G.begin(),G.end(),back_inserter(tmp));
+            fMonths.at(m).clear(); fMonths.at(m)=tmp; tmp.clear();
+        }
+    }
+
+    if(G.at(1).compare("Morning") == 0){
+        if(fTime.at(t).empty()){
+            fTime.at(t).push_back(G.at(0)); fTime.at(t).push_back(G.at(1));  fTime.at(t).push_back(G.at(2));
+        }
+        else{
+            sort(fTime.at(t).begin(),fTime.at(t).end());
+            sort(G.begin(),G.end());
+            set_intersection(fTime.at(t).begin(),fTime.at(t).end(),G.begin(),G.end(),back_inserter(tmp));
+            fTime.at(t).clear(); fTime.at(t)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(1).compare("Noon") == 0){
+        t=1;
+        if(fTime.at(t).empty()){
+            fTime.at(t).push_back(G.at(0)); fTime.at(t).push_back(G.at(1));  fTime.at(t).push_back(G.at(2));
+        }
+        else{
+            sort(fTime.at(t).begin(),fTime.at(t).end());
+            sort(G.begin(),G.end());
+            set_intersection(fTime.at(t).begin(),fTime.at(t).end(),G.begin(),G.end(),back_inserter(tmp));
+            fTime.at(t).clear(); fTime.at(t)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(1).compare("Evening") == 0){
+        t=2;
+        if(fTime.at(t).empty()){
+            fTime.at(t).push_back(G.at(0)); fTime.at(t).push_back(G.at(1));  fTime.at(t).push_back(G.at(2));
+        }
+        else{
+            sort(fTime.at(t).begin(),fTime.at(t).end());
+            sort(G.begin(),G.end());
+            set_intersection(fTime.at(t).begin(),fTime.at(t).end(),G.begin(),G.end(),back_inserter(tmp));
+            fTime.at(t).clear(); fTime.at(t)=tmp; tmp.clear();
+        }
+    }
+
+    if(G.at(2).compare("Very low") == 0){
+        if(fPower.at(p).empty()){
+            fPower.at(p).push_back(G.at(0)); fPower.at(p).push_back(G.at(1));  fPower.at(p).push_back(G.at(2));
+        }
+        else{
+            sort(fPower.at(p).begin(),fPower.at(p).end());
+            sort(G.begin(),G.end());
+            set_intersection(fPower.at(p).begin(),fPower.at(p).end(),G.begin(),G.end(),back_inserter(tmp));
+            fPower.at(p).clear(); fPower.at(p)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(2).compare("Low") == 0){
+        p=1;
+        if(fPower.at(p).empty()){
+            fPower.at(p).push_back(G.at(0)); fPower.at(p).push_back(G.at(1));  fPower.at(p).push_back(G.at(2));
+        }
+        else{
+            sort(fPower.at(p).begin(),fPower.at(p).end());
+            sort(G.begin(),G.end());
+            set_intersection(fPower.at(p).begin(),fPower.at(p).end(),G.begin(),G.end(),back_inserter(tmp));
+            fPower.at(p).clear(); fPower.at(p)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(2).compare("Medium") == 0){
+        p=2;
+        if(fPower.at(p).empty()){
+            fPower.at(p).push_back(G.at(0)); fPower.at(p).push_back(G.at(1));  fPower.at(p).push_back(G.at(2));
+        }
+        else{
+            sort(fPower.at(p).begin(),fPower.at(p).end());
+            sort(G.begin(),G.end());
+            set_intersection(fPower.at(p).begin(),fPower.at(p).end(),G.begin(),G.end(),back_inserter(tmp));
+            fPower.at(p).clear(); fPower.at(p)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(2).compare("High") == 0){
+        p=3;
+        if(fPower.at(p).empty()){
+            fPower.at(p).push_back(G.at(0)); fPower.at(p).push_back(G.at(1));  fPower.at(p).push_back(G.at(2));
+        }
+        else{
+            sort(fPower.at(p).begin(),fPower.at(p).end());
+            sort(G.begin(),G.end());
+            set_intersection(fPower.at(p).begin(),fPower.at(p).end(),G.begin(),G.end(),back_inserter(tmp));
+            fPower.at(p).clear(); fPower.at(p)=tmp; tmp.clear();
+        }
+    }
+    else if(G.at(2).compare("Very high") == 0){
+        p=4;
+        if(fPower.at(p).empty()){
+            fPower.at(p).push_back(G.at(0)); fPower.at(p).push_back(G.at(1));  fPower.at(p).push_back(G.at(2));
+        }
+        else{
+            sort(fPower.at(p).begin(),fPower.at(p).end());
+            sort(G.begin(),G.end());
+            set_intersection(fPower.at(p).begin(),fPower.at(p).end(),G.begin(),G.end(),back_inserter(tmp));
+            fPower.at(p).clear(); fPower.at(p)=tmp; tmp.clear();
+        }
+    }
+
+    G.clear();
 }
 
 void remplissage(){
@@ -257,21 +503,9 @@ void remplissage(){
                 power.at(j).push_back(false);
             }
         }
-    }
-}
 
-void fermeture(){
-    if(G.at(0).compare("Janvier") == 0){
-        if(fMonths.empty())
-            fMonths.at(0).push_back(G.at(0)+G.at(1)+G.at(2));
-        else{
-            vector<string> tmp;
-            set_intersection(fMonths.at(0).begin(),fMonths.at(0).end(),G.begin(),G.end(),tmp.begin());
-            fMonths.at(0).clear(); fMonths.at(0) = tmp; tmp.clear();
-        }
+        fermeture();
     }
-
-    G.clear();
 }
 
 void displayMonths(){
@@ -304,10 +538,33 @@ void displayPower(){
     }
 }
 
+void displayFermeture(){
+    cout << endl << endl;
+    for(int i=0; i<fMonths.size(); i++){
+        cout << endl << "fermeture mois " << i << " : ";
+        for(int j=0; j<fMonths.at(i).size(); j++){
+             cout << fMonths.at(i).at(j) << " ";
+        }
+    }
+    for(int i=0; i<fTime.size(); i++){
+        cout << endl << "fermeture periode " << i << " : ";
+        for(int j=0; j<fTime.at(i).size(); j++){
+             cout << fTime.at(i).at(j) << " ";
+        }
+    }
+    for(int i=0; i<fPower.size(); i++){
+        cout << endl << "fermeture conso " << i << " : ";
+        for(int j=0; j<fPower.at(i).size(); j++){
+             cout << fPower.at(i).at(j) << " ";
+        }
+    }
+}
+
 void display(){
     displayMonths();
     displayTime();
     displayPower();
+    displayFermeture();
 }
 
 int main(){
